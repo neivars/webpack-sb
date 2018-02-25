@@ -13,6 +13,9 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title: 'Code Splitting'
 		}),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'common' // Specify the common bundle's name.
+		}),
 	],
 	output: {
 		filename: '[name].bundle.js',
